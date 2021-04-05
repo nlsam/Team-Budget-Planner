@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Team Budget Planner</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+      <link href="css/styling.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.2.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+    <div class="header">
+        <h1>The Team Budget Planner</h1> 
+      </div>
+      <div>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark justify-content-center">
+             <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="finance.html">Finance Manager</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="product.html">Product Manager</a>
+                </li>
+              </ul>
+            </nav>
+        </div>
+    
+    <div class=“container-fluid”> 
+          <p> Team Budget Planner: The perfect tool to help your business manage its finnaces and dailys tasks
+      </p>
+      </div>
+      
+      <div>
+        <p>Form for adding tasks</p>
+        <form class="forms" action="#">
+            <label for="addid">New Task ID:</label><br>
+            <input type="number" id="addid" name="addid" required> <br>
+            <label for="adddealname">Deal Name:</label><br>
+            <input type="text" id="adddealname" name="adddealname" required> <br>
+            <label for="adddescription">Brief Description:</label><br>
+             <textarea name="adddescription" id="adddescription" rows="10" cols="30">
+              </textarea><br>
+            <label for="addvendor">Vendor Name:</label><br>
+            <input type="text" id="addvendor" name="addvendor" required> <br>
+            <input type="submit" onclick="addDeal(); return false;" value="Add"><br>
+          </form>
+      </div>
+      <div>
+        <p>Form for editing tasks</p>
+        <form class="forms" action="#">
+            <label for="editid"> Existing Task ID:</label><br>
+            <input type="number" id="editid" name="editid" required> <br>
+            <label for="editdealname">Deal Name:</label><br>
+            <input type="text" id="editdealname" name="editdealname" required> <br>
+            <label for="editdescription">Brief Description:</label><br>
+             <textarea name="editdescription" id="editdescription"rows="10" cols="30">
+              </textarea><br>
+            <label for="editvendor">Vendor Name:</label><br>
+            <input type="text" id="editvendor" name="editvendor" required> <br>
+            <input type="submit" onclick="editDeal(); return false;" value="Edit"><br>
+          </form>          
+      </div>
+      <div>
+          <p>Form for deleting tasks</p>
+          <form class="forms">
+            <label for="id">Task ID:</label><br>
+            <input type="number" id="id" name="id" required> <br>
+            <input type="submit" onclick="deleteDeal(); return false;" value="Delete"><br>
+          </form>
+      </div>
+      <div>
+        <form class="forms">
+          <input type="submit" onclick="showTable(); return false;" value="Show Table"><br>
+      </form>
+        <table class="tables" id="taskList">
+            <tr>
+                <th> Deal ID</th>
+                <th> Deal Name</th>
+                <th> Brief Description</th>
+                <th> Vendor Name</th>
+                <th> Cost</th>
+            </tr>
+        </table>
+       
+   </div>
+          
+      <!-- Footer -->
+              <footer class="page-footer font-small indigo">
+      
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3"> Website by Kite Technologies | Developer-Nehemiah Sam
+                  
+                </div>
+                <!-- Copyright -->
+      
+              </footer>
+              <!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.2.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="scripts/manager.js"> </script>
+</body>
+</html>
